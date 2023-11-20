@@ -1,6 +1,26 @@
 # On the Economics of Adversarial Machine Learning
+## Further Heatmaps
+### 6xN Games
+#### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN whitebox heatmap adversary](heatmaps/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/def-whitebox-N-100000.png)
 
-These are the results of the experiment (described in the paper, section VI.A).
+
+#### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN graybox heatmap adversary](heatmaps/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/def-graybox-N-100000.png)
+
+
+#### Blackbox scenario
+
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN black-box heatmap adversary](heatmaps/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/def-blackbox-N-100000.png)
+
+
+## Experiment Results (described in the paper, section VI.A).
 
 Legend:<br>
 <sup>\|\|</sup>: Early Stopping<br>
