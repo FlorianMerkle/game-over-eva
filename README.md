@@ -1,5 +1,52 @@
 # On the Economics of Adversarial Machine Learning
 ## Further Heatmaps
+### 2xN Games
+#### ResNet50
+##### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Blackbox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+#### DenseNet121
+##### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Blackbox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+#### MobileNetV2
+##### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
+##### Blackbox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+cooming soon|cooming soon
+
 ### 6xN Games
 #### Whitebox scenario
 Adversary             |  Defender
@@ -18,6 +65,7 @@ Adversary             |  Defender
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN black-box heatmap adversary](heatmaps/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/def-blackbox-N-100000.png)
+
 
 
 ## Experiment Results (described in the paper, section VI.A).
