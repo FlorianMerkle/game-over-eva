@@ -5,71 +5,94 @@
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![ResNet50 whitebox heatmap adversary](heatmaps/ResNet50/adv-whitebox-N-100000.png)  |  ![ResNet50 whitebox heatmap defender](heatmaps/ResNet50/def-whitebox-N-100000.png)
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![ResNet50 graybox heatmap adversary](heatmaps/ResNet50/adv-graybox-N-100000.png)  |  ![ResNet50 graybox heatmap defender](heatmaps/ResNet50/def-graybox-N-100000.png)
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![ResNet50 Blackbox heatmap adversary](heatmaps/ResNet50/adv-blackbox-N-100000.png)  |  ![ResNet50 Blackbox heatmap defender](heatmaps/ResNet50/def-blackbox-N-100000.png)
+
 #### DenseNet121
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![DenseNet121 whitebox heatmap adversary](heatmaps/densenet121/adv-whitebox-N-100000.png)  |  ![DenseNet121 whitebox heatmap defender](heatmaps/densenet121/def-whitebox-N-100000.png)
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![DenseNet121 graybox heatmap adversary](heatmaps/densenet121/adv-graybox-N-100000.png)  |  ![DenseNet121 graybox heatmap defender](heatmaps/densenet121/def-graybox-N-100000.png)
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/def-blackbox-N-100000.png)#### MobileNetV2
+
 #### MobileNetV2
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![MobileNetV2 whitebox heatmap adversary](heatmaps/MobileNetV2/adv-whitebox-N-100000.png)  |  ![MobileNetV2 whitebox heatmap defender](heatmaps/MobileNetV2/def-whitebox-N-100000.png)
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![MobileNetV2 graybox heatmap adversary](heatmaps/MobileNetV2/adv-graybox-N-100000.png)  |  ![MobileNetV2 graybox heatmap defender](heatmaps/MobileNetV2/def-graybox-N-100000.png)
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-cooming soon|cooming soon
+![MobileNetV2 Blackbox heatmap adversary](heatmaps/MobileNetV2/adv-blackbox-N-100000.png)  |  ![MobileNetV2 Blackbox heatmap defender](heatmaps/MobileNetV2/def-blackbox-N-100000.png)
+
+
+
 
 ### 6xN Games
 #### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN whitebox heatmap adversary](heatmaps/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/def-whitebox-N-100000.png)
+![6xN whitebox heatmap adversary](heatmaps/6xN/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/def-whitebox-N-100000.png)
 
 
 #### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN graybox heatmap adversary](heatmaps/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/def-graybox-N-100000.png)
+![6xN graybox heatmap adversary](heatmaps/6xN/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/def-graybox-N-100000.png)
 
 
 #### Blackbox scenario
 
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN black-box heatmap adversary](heatmaps/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/def-blackbox-N-100000.png)
+![6xN black-box heatmap adversary](heatmaps/6xN/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/def-blackbox-N-100000.png)
 
 ### Games with higher R_a Range
 #### 2xN
 
 #### 6xN
+
+##### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN whitebox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/R_a=1e7/def-whitebox-N-100000.png)
+
+
+##### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN graybox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/R_a=1e7/def-graybox-N-100000.png)
+
+
+##### Blackbox scenario
+
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/def-blackbox-N-100000.png)
 
 ### Games with alternative R_d values
 #### 2xN
