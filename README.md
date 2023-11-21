@@ -31,7 +31,7 @@ Adversary             |  Defender
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/def-blackbox-N-100000.png)#### MobileNetV2
+![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/def-blackbox-N-100000.png)
 
 #### MobileNetV2
 ##### Whitebox scenario
