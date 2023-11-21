@@ -66,7 +66,15 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN black-box heatmap adversary](heatmaps/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/def-blackbox-N-100000.png)
 
+### Games with higher R_a Range
+#### 2xN
 
+#### 6xN
+
+### Games with alternative R_d values
+#### 2xN
+
+#### 6xN
 
 ## Experiment Results (described in the paper, section VI.A).
 
