@@ -73,26 +73,42 @@ Adversary             |  Defender
 
 ### Games with higher R_a Range
 #### 2xN
-
-#### 6xN
-
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN whitebox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/R_a=1e7/def-whitebox-N-100000.png)
+![6xN whitebox heatmap adversary](heatmaps/ResNet50/2xN-adv-whitebox-extended-R_a.png)  |  ![6xN whitebox heatmap defender](heatmaps/ResNet50/2xN-def-whitebox-extended-R_a.png)
 
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN graybox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/R_a=1e7/def-graybox-N-100000.png)
+![6xN graybox heatmap adversary](heatmaps/ResNet50/2xN-adv-graybox-extended-R_a.png)  |  ![6xN graybox heatmap defender](heatmaps/ResNet50/2xN-def-graybox-extended-R_a.png)
 
 
 ##### Blackbox scenario
 
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/def-blackbox-N-100000.png)
+![6xN black-box heatmap adversary](heatmaps/ResNet50/2xN-adv-blackbox-extended-R_a.png)  |  ![6xN black-box heatmap defender](heatmaps/ResNet50/2xN-def-blackbox-extended-R_a.png)
+#### 6xN
+
+##### Whitebox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN whitebox heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-whitebox-extended-R_a.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-whitebox-extended-R_a.png)
+
+
+##### Graybox scenario
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN graybox heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-graybox-extended-R_a.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-graybox-extended-R_a.png)
+
+
+##### Blackbox scenario
+
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-blackbox-extended-R_a.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-blackbox-extended-R_a.png)
 
 ### Games with alternative R_d values
 #### 2xN
