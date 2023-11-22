@@ -111,9 +111,34 @@ Adversary             |  Defender
 ![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-blackbox-extended-R_a.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-blackbox-extended-R_a.png)
 
 ### Games with alternative R_d values
-#### 2xN
+#### ResNet50 (only) - Whitebox Scenario
+##### R_d = R_a (as in the paper)
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/def-whitebox-N-100000.png) 
 
-#### 6xN
+##### R_d = 0.1R_a 
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/R_d=0.1R_a-adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/R_d=0.1R_a-def-whitebox-N-100000.png) 
+
+##### R_d = 100
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/R_d=100-adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/R_d=100-def-whitebox-N-100000.png) 
+
+##### R_d = 1,000
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/R_d=1000-adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/R_d=1000-def-whitebox-N-100000.png) 
+
+##### R_d = 10,000
+Adversary             |  Defender
+:-------------------------:|:-------------------------:
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/R_d=10000-adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/R_d=10000-def-whitebox-N-100000.png) 
+
+
+
 
 ## Experiment Results (described in the paper, section VI.A).
 
