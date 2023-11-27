@@ -58,18 +58,67 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN whitebox heatmap adversary](heatmaps/6xN/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/def-whitebox-N-100000.png)
 
+| attack                                |   steps | $R_a$               | $rho$      |
+|:--------------------------------------|--------:|:--------------------|:-----------|
+| not attacking                         |       0 | 0.1, 4.095          | 0.01, 1.0  |
+| UAP                                   |       0 | 0.9, 231.013        | 0.01, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |       3 | 151.991, 231.013    | 0.05, 1.0  |
+| L2CarliniWagnerAttack                 |       3 | 215.443, 215.443    | 0.37, 0.4  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      10 | 231.013, 231.013    | 0.05, 0.23 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      30 | 231.013, 100000.0   | 0.01, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     100 | 1519.911, 100000.0  | 0.32, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     300 | 37649.358, 100000.0 | 0.36, 1.0  |
+
+|    | model name        | $R_a$             | $rho$     |
+|---:|:------------------|:------------------|:----------|
+|  0 | resnet-standard   | 0.1, 100000.0     | 0.01, 1.0 |
+|  1 | resnet-robust     | 1.326, 100000.0   | 0.3, 1.0  |
+|  2 | densenet-standard | 12.649, 231.013   | 0.05, 1.0 |
+|  3 | mobilenet-robust  | 151.991, 2656.088 | 0.71, 1.0 |
 
 #### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN graybox heatmap adversary](heatmaps/6xN/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/def-graybox-N-100000.png)
 
+| attack                                                               |   steps | $R_a$                | $rho$     |
+|:---------------------------------------------------------------------|--------:|:---------------------|:----------|
+| not attacking                                                        |       0 | 0.1, 13.895          | 0.01, 1.0 |
+| UAP <sup>*</sup><sup>=</sup>                                         |       0 | 2.812, 11497.57      | 0.01, 1.0 |
+| UAP <sup>&Dagger;</sup><sup>=</sup>                                  |       0 | 7.197, 16.768        | 0.75, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>*</sup><sup>=</sup>        |       3 | 1417.474, 12328.467  | 0.05, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>                                       |   10000 | 8111.308, 100000.0   | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>&Dagger;</sup><sup>=</sup>                |      10 | 12328.467, 13219.411 | 0.23, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      30 | 14174.742, 23101.297 | 0.23, 1.0 |
+
+|    | model name         | $R_a$               | $rho$     |
+|---:|:-------------------|:--------------------|:----------|
+|  0 | resnet-standard    | 0.1, 100000.0       | 0.01, 1.0 |
+|  1 | resnet-robust      | 3.089, 12328.467    | 0.43, 1.0 |
+|  2 | densenet-standard  | 11.514, 100000.0    | 0.04, 1.0 |
+|  3 | mobilenet-standard | 1519.911, 12328.467 | 0.15, 1.0 |
+|  4 | mobilenet-robust   | 11497.57, 100000.0  | 0.23, 1.0 |
 
 #### Blackbox scenario
 
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN black-box heatmap adversary](heatmaps/6xN/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/def-blackbox-N-100000.png)
+
+| attack                            |   steps | $R_a$              | $rho$     |
+|:----------------------------------|--------:|:-------------------|:----------|
+| not attacking                     |       0 | 0.1, 8111.308      | 0.01, 1.0 |
+| BoundaryAttack                    |    3000 | 4037.017, 7564.633 | 0.01, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |   10000 | 5722.368, 100000.0 | 0.01, 1.0 |
+| HopSkipJumpAttack                 |       3 | 6579.332, 8111.308 | 0.12, 1.0 |
+| HopSkipJumpAttack <sup>\|\|</sup> |       3 | 8111.308, 9326.033 | 0.12, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |     100 | 8697.49, 16297.508 | 0.23, 1.0 |
+
+|    | model name        | $R_a$              | $rho$     |
+|---:|:------------------|:-------------------|:----------|
+|  0 | resnet-standard   | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | densenet-standard | 4037.017, 100000.0 | 0.05, 1.0 |
+|  2 | mobilenet-robust  | 9326.033, 100000.0 | 0.23, 1.0 |
 
 ### Games with higher R_a Range
 #### 2xN
