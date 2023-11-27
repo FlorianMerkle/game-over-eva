@@ -7,15 +7,56 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![ResNet50 whitebox heatmap adversary](heatmaps/ResNet50/adv-whitebox-N-100000.png)  |  ![ResNet50 whitebox heatmap defender](heatmaps/ResNet50/def-whitebox-N-100000.png)
 
+| attack                                |   steps | $R_a$               | $\rho$     |
+|:--------------------------------------|--------:|:--------------------|:----------|
+| not attacking                         |       0 | 0.1, 4.095          | 0.01, 1.0 |
+| UAP                                   |       0 | 0.9, 231.013        | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      30 | 231.013, 100000.0   | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     100 | 2848.036, 100000.0  | 0.33, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     300 | 37649.358, 100000.0 | 0.37, 1.0 |
+
+|    | model name      | $R_a$           | $\rho$     |
+|---:|:----------------|:----------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet-robust   | 1.326, 100000.0 | 0.3, 1.0  |
+
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![ResNet50 graybox heatmap adversary](heatmaps/ResNet50/adv-graybox-N-100000.png)  |  ![ResNet50 graybox heatmap defender](heatmaps/ResNet50/def-graybox-N-100000.png)
 
+| attack                                                               |   steps | $R_a$                | $\rho$     |
+|:---------------------------------------------------------------------|--------:|:---------------------|:----------|
+| not attacking                                                        |       0 | 0.1, 10.481          | 0.01, 1.0 |
+| UAP <sup>*</sup><sup>=</sup>                                         |       0 | 2.812, 13219.411     | 0.01, 1.0 |
+| UAP <sup>&Dagger;</sup><sup>=</sup>                                  |       0 | 8.685, 2848.036      | 0.39, 1.0 |
+| L2CarliniWagnerAttack <sup>&Dagger;</sup><sup>=</sup>                |      10 | 3053.856, 17475.284  | 0.21, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>                                       |   10000 | 8111.308, 100000.0   | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      30 | 18738.174, 18738.174 | 0.21, 1.0 |
+
+|    | model name      | $R_a$           | $\rho$     |
+|---:|:----------------|:----------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet-robust   | 3.089, 100000.0 | 0.21, 1.0 |
+
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![ResNet50 Blackbox heatmap adversary](heatmaps/ResNet50/adv-blackbox-N-100000.png)  |  ![ResNet50 Blackbox heatmap defender](heatmaps/ResNet50/def-blackbox-N-100000.png)
+
+| attack                         |   steps | $R_a$                | $\rho$     |
+|:-------------------------------|--------:|:---------------------|:----------|
+| not attacking                  |       0 | 0.1, 4037.017        | 0.01, 1.0 |
+| BoundaryAttack                 |    3000 | 4037.017, 8111.308   | 0.01, 1.0 |
+| HopSkipJumpAttack              |       3 | 4328.761, 11497.57   | 0.21, 1.0 |
+| BoundaryAttack <sup>\|\|</sup> |   10000 | 5722.368, 100000.0   | 0.01, 1.0 |
+| BoundaryAttack                 |     100 | 12328.467, 12328.467 | 0.21, 1.0 |
+| BoundaryAttack <sup>\|\|</sup> |     100 | 13219.411, 14174.742 | 0.21, 1.0 |
+
+|    | model name      | $R_a$              | $\rho$     |
+|---:|:----------------|:-------------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | resnet-robust   | 4037.017, 100000.0 | 0.21, 1.0 |
 
 #### DenseNet121
 ##### Whitebox scenario
@@ -58,7 +99,7 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN whitebox heatmap adversary](heatmaps/6xN/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/def-whitebox-N-100000.png)
 
-| attack                                |   steps | $R_a$               | $rho$      |
+| attack                                |   steps | $R_a$               | $\rho$      |
 |:--------------------------------------|--------:|:--------------------|:-----------|
 | not attacking                         |       0 | 0.1, 4.095          | 0.01, 1.0  |
 | UAP                                   |       0 | 0.9, 231.013        | 0.01, 1.0  |
@@ -69,7 +110,7 @@ Adversary             |  Defender
 | L2CarliniWagnerAttack <sup>\|\|</sup> |     100 | 1519.911, 100000.0  | 0.32, 1.0  |
 | L2CarliniWagnerAttack <sup>\|\|</sup> |     300 | 37649.358, 100000.0 | 0.36, 1.0  |
 
-|    | model name        | $R_a$             | $rho$     |
+|    | model name        | $R_a$             | $\rho$     |
 |---:|:------------------|:------------------|:----------|
 |  0 | resnet-standard   | 0.1, 100000.0     | 0.01, 1.0 |
 |  1 | resnet-robust     | 1.326, 100000.0   | 0.3, 1.0  |
@@ -81,7 +122,7 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN graybox heatmap adversary](heatmaps/6xN/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/def-graybox-N-100000.png)
 
-| attack                                                               |   steps | $R_a$                | $rho$     |
+| attack                                                               |   steps | $R_a$                | $\rho$     |
 |:---------------------------------------------------------------------|--------:|:---------------------|:----------|
 | not attacking                                                        |       0 | 0.1, 13.895          | 0.01, 1.0 |
 | UAP <sup>*</sup><sup>=</sup>                                         |       0 | 2.812, 11497.57      | 0.01, 1.0 |
@@ -91,7 +132,7 @@ Adversary             |  Defender
 | L2CarliniWagnerAttack <sup>&Dagger;</sup><sup>=</sup>                |      10 | 12328.467, 13219.411 | 0.23, 1.0 |
 | L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      30 | 14174.742, 23101.297 | 0.23, 1.0 |
 
-|    | model name         | $R_a$               | $rho$     |
+|    | model name         | $R_a$               | $\rho$     |
 |---:|:-------------------|:--------------------|:----------|
 |  0 | resnet-standard    | 0.1, 100000.0       | 0.01, 1.0 |
 |  1 | resnet-robust      | 3.089, 12328.467    | 0.43, 1.0 |
@@ -105,7 +146,7 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![6xN black-box heatmap adversary](heatmaps/6xN/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/def-blackbox-N-100000.png)
 
-| attack                            |   steps | $R_a$              | $rho$     |
+| attack                            |   steps | $R_a$              | $\rho$     |
 |:----------------------------------|--------:|:-------------------|:----------|
 | not attacking                     |       0 | 0.1, 8111.308      | 0.01, 1.0 |
 | BoundaryAttack                    |    3000 | 4037.017, 7564.633 | 0.01, 1.0 |
@@ -114,7 +155,7 @@ Adversary             |  Defender
 | HopSkipJumpAttack <sup>\|\|</sup> |       3 | 8111.308, 9326.033 | 0.12, 1.0 |
 | BoundaryAttack <sup>\|\|</sup>    |     100 | 8697.49, 16297.508 | 0.23, 1.0 |
 
-|    | model name        | $R_a$              | $rho$     |
+|    | model name        | $R_a$              | $\rho$     |
 |---:|:------------------|:-------------------|:----------|
 |  0 | resnet-standard   | 0.1, 100000.0      | 0.01, 1.0 |
 |  1 | densenet-standard | 4037.017, 100000.0 | 0.05, 1.0 |
