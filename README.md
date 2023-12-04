@@ -5,7 +5,7 @@
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![ResNet50 whitebox heatmap adversary](heatmaps/ResNet50/adv-whitebox-N-100000.png)  |  ![ResNet50 whitebox heatmap defender](heatmaps/ResNet50/def-whitebox-N-100000.png)
+![ResNet50 whitebox heatmap adversary](heatmaps/ResNet50/R_d=R_a-adv-whitebox-N-100000.png)  |  ![ResNet50 whitebox heatmap defender](heatmaps/ResNet50/R_d=R_a-def-whitebox-N-100000.png)
 
 | attack                                |   steps | $R_a$               | $\rho$     |
 |:--------------------------------------|--------:|:--------------------|:----------|
@@ -17,13 +17,13 @@ Adversary             |  Defender
 
 |    | model name      | $R_a$           | $\rho$     |
 |---:|:----------------|:----------------|:----------|
-|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
-|  1 | resnet-robust   | 1.326, 100000.0 | 0.3, 1.0  |
+|  0 | resnet | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet<sup>&diams;</sup>   | 1.326, 100000.0 | 0.3, 1.0  |
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![ResNet50 graybox heatmap adversary](heatmaps/ResNet50/adv-graybox-N-100000.png)  |  ![ResNet50 graybox heatmap defender](heatmaps/ResNet50/def-graybox-N-100000.png)
+![ResNet50 graybox heatmap adversary](heatmaps/ResNet50/R_d=R_a-adv-graybox-N-100000.png)  |  ![ResNet50 graybox heatmap defender](heatmaps/ResNet50/R_d=R_a-def-graybox-N-100000.png)
 
 | attack                                                               |   steps | $R_a$                | $\rho$     |
 |:---------------------------------------------------------------------|--------:|:---------------------|:----------|
@@ -36,13 +36,13 @@ Adversary             |  Defender
 
 |    | model name      | $R_a$           | $\rho$     |
 |---:|:----------------|:----------------|:----------|
-|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
-|  1 | resnet-robust   | 3.089, 100000.0 | 0.21, 1.0 |
+|  0 | resnet | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet<sup>&diams;</sup>   | 3.089, 100000.0 | 0.21, 1.0 |
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![ResNet50 Blackbox heatmap adversary](heatmaps/ResNet50/adv-blackbox-N-100000.png)  |  ![ResNet50 Blackbox heatmap defender](heatmaps/ResNet50/def-blackbox-N-100000.png)
+![ResNet50 Blackbox heatmap adversary](heatmaps/ResNet50/R_d=R_a-adv-blackbox-N-100000.png)  |  ![ResNet50 Blackbox heatmap defender](heatmaps/ResNet50/R_d=R_a-def-blackbox-N-100000.png)
 
 | attack                         |   steps | $R_a$                | $\rho$     |
 |:-------------------------------|--------:|:---------------------|:----------|
@@ -55,40 +55,40 @@ Adversary             |  Defender
 
 |    | model name      | $R_a$              | $\rho$     |
 |---:|:----------------|:-------------------|:----------|
-|  0 | resnet-standard | 0.1, 100000.0      | 0.01, 1.0 |
-|  1 | resnet-robust   | 4037.017, 100000.0 | 0.21, 1.0 |
+|  0 | resnet | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | resnet<sup>&diams;</sup>   | 4037.017, 100000.0 | 0.21, 1.0 |
 
 #### DenseNet121
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![DenseNet121 whitebox heatmap adversary](heatmaps/densenet121/adv-whitebox-N-100000.png)  |  ![DenseNet121 whitebox heatmap defender](heatmaps/densenet121/def-whitebox-N-100000.png)
+![DenseNet121 whitebox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-whitebox-N-100000.png)  |  ![DenseNet121 whitebox heatmap defender](heatmaps/densenet121/R_d=R_a-def-whitebox-N-100000.png)
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![DenseNet121 graybox heatmap adversary](heatmaps/densenet121/adv-graybox-N-100000.png)  |  ![DenseNet121 graybox heatmap defender](heatmaps/densenet121/def-graybox-N-100000.png)
+![DenseNet121 graybox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-graybox-N-100000.png)  |  ![DenseNet121 graybox heatmap defender](heatmaps/densenet121/R_d=R_a-def-graybox-N-100000.png)
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/def-blackbox-N-100000.png)
+![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/R_d=R_a-def-blackbox-N-100000.png)
 
 #### MobileNetV2
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![MobileNetV2 whitebox heatmap adversary](heatmaps/MobileNetV2/adv-whitebox-N-100000.png)  |  ![MobileNetV2 whitebox heatmap defender](heatmaps/MobileNetV2/def-whitebox-N-100000.png)
+![MobileNetV2 whitebox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-whitebox-N-100000.png)  |  ![MobileNetV2 whitebox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-whitebox-N-100000.png)
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![MobileNetV2 graybox heatmap adversary](heatmaps/MobileNetV2/adv-graybox-N-100000.png)  |  ![MobileNetV2 graybox heatmap defender](heatmaps/MobileNetV2/def-graybox-N-100000.png)
+![MobileNetV2 graybox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-graybox-N-100000.png)  |  ![MobileNetV2 graybox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-graybox-N-100000.png)
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![MobileNetV2 Blackbox heatmap adversary](heatmaps/MobileNetV2/adv-blackbox-N-100000.png)  |  ![MobileNetV2 Blackbox heatmap defender](heatmaps/MobileNetV2/def-blackbox-N-100000.png)
+![MobileNetV2 Blackbox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-blackbox-N-100000.png)  |  ![MobileNetV2 Blackbox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-blackbox-N-100000.png)
 
 
 
@@ -112,10 +112,10 @@ Adversary             |  Defender
 
 |    | model name        | $R_a$             | $\rho$     |
 |---:|:------------------|:------------------|:----------|
-|  0 | resnet-standard   | 0.1, 100000.0     | 0.01, 1.0 |
-|  1 | resnet-robust     | 1.326, 100000.0   | 0.3, 1.0  |
-|  2 | densenet-standard | 12.649, 231.013   | 0.05, 1.0 |
-|  3 | mobilenet-robust  | 151.991, 2656.088 | 0.71, 1.0 |
+|  0 | resnet   | 0.1, 100000.0     | 0.01, 1.0 |
+|  1 | resnet<sup>&diams;</sup>     | 1.326, 100000.0   | 0.3, 1.0  |
+|  2 | densenet | 12.649, 231.013   | 0.05, 1.0 |
+|  3 | mobilenet<sup>&diams;</sup>  | 151.991, 2656.088 | 0.71, 1.0 |
 
 #### Graybox scenario
 Adversary             |  Defender
@@ -134,11 +134,11 @@ Adversary             |  Defender
 
 |    | model name         | $R_a$               | $\rho$     |
 |---:|:-------------------|:--------------------|:----------|
-|  0 | resnet-standard    | 0.1, 100000.0       | 0.01, 1.0 |
-|  1 | resnet-robust      | 3.089, 12328.467    | 0.43, 1.0 |
-|  2 | densenet-standard  | 11.514, 100000.0    | 0.04, 1.0 |
-|  3 | mobilenet-standard | 1519.911, 12328.467 | 0.15, 1.0 |
-|  4 | mobilenet-robust   | 11497.57, 100000.0  | 0.23, 1.0 |
+|  0 | resnet    | 0.1, 100000.0       | 0.01, 1.0 |
+|  1 | resnet<sup>&diams;</sup>      | 3.089, 12328.467    | 0.43, 1.0 |
+|  2 | densenet  | 11.514, 100000.0    | 0.04, 1.0 |
+|  3 | mobilenet | 1519.911, 12328.467 | 0.15, 1.0 |
+|  4 | mobilenet<sup>&diams;</sup>   | 11497.57, 100000.0  | 0.23, 1.0 |
 
 #### Blackbox scenario
 
@@ -157,55 +157,55 @@ Adversary             |  Defender
 
 |    | model name        | $R_a$              | $\rho$     |
 |---:|:------------------|:-------------------|:----------|
-|  0 | resnet-standard   | 0.1, 100000.0      | 0.01, 1.0 |
-|  1 | densenet-standard | 4037.017, 100000.0 | 0.05, 1.0 |
-|  2 | mobilenet-robust  | 9326.033, 100000.0 | 0.23, 1.0 |
+|  0 | resnet   | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | densenet | 4037.017, 100000.0 | 0.05, 1.0 |
+|  2 | mobilenet<sup>&diams;</sup>  | 9326.033, 100000.0 | 0.23, 1.0 |
 
 ### Games with higher R_a Range
 #### 2xN
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN whitebox heatmap adversary](heatmaps/ResNet50/2xN-adv-whitebox-extended-R_a.png)  |  ![6xN whitebox heatmap defender](heatmaps/ResNet50/2xN-def-whitebox-extended-R_a.png)
+![6xN whitebox heatmap adversary](heatmaps/ResNet50/R_a=1e7/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/ResNet50/R_a=1e7/def-whitebox-N-100000.png)
 
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN graybox heatmap adversary](heatmaps/ResNet50/2xN-adv-graybox-extended-R_a.png)  |  ![6xN graybox heatmap defender](heatmaps/ResNet50/2xN-def-graybox-extended-R_a.png)
+![6xN graybox heatmap adversary](heatmaps/ResNet50/R_a=1e7/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/ResNet50/R_a=1e7/def-graybox-N-100000.png)
 
 
 ##### Blackbox scenario
 
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN black-box heatmap adversary](heatmaps/ResNet50/2xN-adv-blackbox-extended-R_a.png)  |  ![6xN black-box heatmap defender](heatmaps/ResNet50/2xN-def-blackbox-extended-R_a.png)
+![6xN black-box heatmap adversary](heatmaps/ResNet50/R_a=1e7/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/ResNet50/R_a=1e7/def-blackbox-N-100000.png)
 #### 6xN
 
 ##### Whitebox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN whitebox heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-whitebox-extended-R_a.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-whitebox-extended-R_a.png)
+![6xN whitebox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-whitebox-N-100000.png)  |  ![6xN whitebox heatmap defender](heatmaps/6xN/R_a=1e7/def-whitebox-N-100000.png)
 
 
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN graybox heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-graybox-extended-R_a.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-graybox-extended-R_a.png)
+![6xN graybox heatmap adversary](heatmaps/6xN/R_a=1e7/adv-graybox-N-100000.png)  |  ![6xN graybox heatmap defender](heatmaps/6xN/R_a=1e7/def-graybox-N-100000.png)
 
 
 ##### Blackbox scenario
 
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/6xN-adv-blackbox-extended-R_a.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/6xN-def-blackbox-extended-R_a.png)
+![6xN black-box heatmap adversary](heatmaps/6xN/R_a=1e7/adv-blackbox-N-100000.png)  |  ![6xN black-box heatmap defender](heatmaps/6xN/R_a=1e7/def-blackbox-N-100000.png)
 
 ### Games with alternative R_d values
 #### ResNet50 (only) - Whitebox Scenario
 ##### R_d = R_a (as in the paper)
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
-![ResNet white-box heatmap adversary](heatmaps/ResNet50/adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/def-whitebox-N-100000.png) 
+![ResNet white-box heatmap adversary](heatmaps/ResNet50/R_d=R_a-adv-whitebox-N-100000.png)  |  ![ResNet white-box heatmap defender](heatmaps/ResNet50/R_d=R_a-def-whitebox-N-100000.png) 
 
 ##### R_d = 0.1R_a 
 Adversary             |  Defender
@@ -349,3 +349,4 @@ MN_: MobileNetV2
 | 100 | UAP<sup>&Dagger;</sup><sup>=</sup>                                  |       0 |            1.6534 |        2223.97 |             23650.9  |              0.0912 |            0.2206 |            0.7794 |              0.9088 |       1867.95  |            1.1254 |             23294.9  |              0.0816 |            0.2058 |            0.7942 |              0.9184 |        2379.96 |            1.1696 |             23806.9  |              0.1112 |            0.2128 |            0.7872 |              0.8888 |
 | 101 | UAP<sup>*</sup><sup>=</sup>                                         |       0 |            1.6425 |        3435.09 |              5739.89 |              0.127  |            0.2168 |            0.7832 |              0.873  |        831.283 |            1.1119 |              3136.08 |              0.394  |            0.186  |            0.814  |              0.606  |        5126.67 |            1.1804 |              7431.47 |              0.3466 |            0.2108 |            0.7892 |              0.6534 |
 | 102 | not attacking                                                       |       0 |            0      |           0    |                 0    |              0      |            0      |            0.7836 |              0.918  |          0     |            0      |                 0    |              0      |            0      |            0.797  |              0.929  |           0    |            0      |                 0    |              0      |            0      |            0.791  |              0.916  |
+
