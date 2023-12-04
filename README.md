@@ -1,4 +1,41 @@
 # On the Economics of Adversarial Machine Learning
+## Analytically derrived mixed strategy intervals
+|      R_a | BR_undefended                       | BR_defended                          | r_max range            |
+|---------:|:------------------------------------|:-------------------------------------|:-----------------------|
+|      | __Whitebox__              |                |              |
+|     0.01 | not attacking              | not attacking               | --             |
+|     1.27 | UAP                         | not attacking               | (0.29, 1.0)  |
+|     3.16 | UAP                         | UAP                          | --       |
+|   236.48 | L2CarliniWagnerAttack<sub>30</sub> <sup>\|\|</sup>  | L2CarliniWagnerAttack<sub>30</sub> <sup>\|\|</sup>   | --       |
+|  2767.89 | L2CarliniWagnerAttack<sub>30</sub> <sup>\|\|</sup> | L2CarliniWagnerAttack<sub>100</sub> <sup>\|\|</sup> | (0.32, 0.36) |
+| 37567.3  | L2CarliniWagnerAttack<sub>30</sub> <sup>\|\|</sup> | L2CarliniWagnerAttack <sub>300</sub> <sup>\|\|</sup> | (0.32, 0.37) |
+|      | __Graybox__              |                |              |
+|     0.01 | not attacking - 0.0084          | not attacking                 | --            |
+|     2.82 | UAP <sup>*</sup><sup>=</sup>             | not attacking          | (0.39, 1.0) |
+|     5.5  | UAP <sup>*</sup><sup>=</sup>             | UAP <sup>&Dagger;</sup><sup>=</sup>                    | (0.39, 1.0) |
+|  2766.32 | UAP <sup>*</sup><sup>=</sup>             | L2CarliniWagnerAttack<sub>10</sub> <sup>&Dagger;</sup><sup>=</sup> | (0.39, 1.0) |
+|  7871.46 | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | L2CarliniWagnerAttack<sub>10</sub> <sup>&Dagger;</sup><sup>=</sup>        | (0.21, 1.0) |
+| 18295.1  | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | L2CarliniWagnerAttack<sub>30</sub> <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup>    | (0.21, 1.0) |
+| 19899.5  | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup>        | --      |
+|      | __Blackbox__              |                |              |
+|     0.01 | not attacking          | not attacking         | --            |
+|  2397.77 | not attacking      | BoundaryAttack<sub>100</sub> <sup>\|\|</sup>   | --            |
+|  3867.91 | BoundaryAttack<sub>3k     | BoundaryAttack<sub>100</sub> <sup>\|\|</sup>   | (0.33, 1.0) |
+|  5722.04 | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | BoundaryAttack<sub>100</sub> <sup>\|\|</sup>   | (0.21, 1.0) |
+| 15072.8  | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | --      |
+
+As motivated above, the only countermeasure that has stood the test of time so far is adversarial training (Madry, et al, 2017). So, although the adversary has many attacks to choose from, they might look at % the empirical results of 
+all their different attack success rates against both the defended and the undefended model and then, by calculating their expected payoff against either of that models, choose the best responses against these two models and possibly mix, i.e., randomize between these two attacks. This is indeed a naive approach, as we know from game theory that the best response to a mixed strategy %, i.e., a defender randomly mixing between defended and undefended model, 
+is not necessarily a combination of best responses to the corresponding pure strategies. %We discuss this in more detail in below experimental section.
+
+Nonetheless, we depict in Table above an exhaustive list of attacks that such an adversary would choose, split into the three different shades of gray detailed in Sec. III.C. 
+
+First of all, we see that even with this naive strategy of the adversary, it is indispensable to take the whole utility function into account, as the adversary's best responses heavily depend on their expected outcome, in Table~\ref{tab:r_max_range} subsumed in the leftmost column as the adversary's revenue for a successful attack $R^{adv}_+$. In all three shades of gray, the adversary has either four (black-box) or six (white- and gray-box) best responses, depending on the exact value of $R^{adv}_+$.
+
+Furthermore, we can see in the rightmost column that, again, for all considered shades of gray, there are several intervals of $\rho$, in which the adversary considers randomizing between their two strategies and thus, also the defender should take randomizing their classifiers into account. On the contrary, when the adversary's best response to both possible defender strategies is the same, we can rule out the existence of mixed strategy Nash equilibrium.
+
+Finally, the differentiation according to the adversary's knowledge is also significant from a defender's point of view, as we can see in columns two and three of Table~\ref{tab:r_max_range} that the adversary's knowledge has a strong influence on which attacks they will consider at all.
+
 ## Further Heatmaps
 ### 2xN Games
 #### ResNet50
