@@ -25,8 +25,8 @@
 | 15072.8  | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | BoundaryAttack<sub>10k</sub> <sup>\|\|</sup> | --      |
 
 As motivated above, the only countermeasure that has stood the test of time so far is adversarial training (Madry, et al, 2017). So, although the adversary has many attacks to choose from, they might look at % the empirical results of 
-all their different attack success rates against both the defended and the undefended model and then, by calculating their expected payoff against either of that models, choose the best responses against these two models and possibly mix, i.e., randomize between these two attacks. This is indeed a naive approach, as we know from game theory that the best response to a mixed strategy %, i.e., a defender randomly mixing between defended and undefended model, 
-is not necessarily a combination of best responses to the corresponding pure strategies. %We discuss this in more detail in below experimental section.
+all their different attack success rates against both the defended and the undefended model and then, by calculating their expected payoff against either of that models, choose the best responses against these two models and possibly mix, i.e., randomize between these two attacks. This is indeed a naive approach, as we know from game theory that the best response to a mixed strategy, i.e., a defender randomly mixing between defended and undefended model, 
+is not necessarily a combination of best responses to the corresponding pure strategies.
 
 Nonetheless, we depict in Table above an exhaustive list of attacks that such an adversary would choose, split into the three different shades of gray detailed in Sec. III.C. 
 
