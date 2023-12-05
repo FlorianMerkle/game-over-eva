@@ -101,15 +101,56 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![DenseNet121 whitebox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-whitebox-N-100000.png)  |  ![DenseNet121 whitebox heatmap defender](heatmaps/densenet121/R_d=R_a-def-whitebox-N-100000.png)
 
+| attack                                |   steps | $R_a$               | $\rho$     |
+|:--------------------------------------|--------:|:--------------------|:----------|
+| not attacking                         |       0 | 0.1, 32.375         | 0.01, 1.0 |
+| UAP                                   |       0 | 6.551, 403.702      | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |       3 | 132.194, 327.455    | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      10 | 247.708, 2848.036   | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      30 | 403.702, 75646.333  | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     100 | 2009.233, 100000.0  | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     300 | 43287.613, 100000.0 | 0.38, 1.0 |
+
+|    | model name      | $R_a$             | $\rho$     |
+|---:|:----------------|:------------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0     | 0.01, 1.0 |
+|  1 | resnet-robust   | 151.991, 100000.0 | 0.26, 1.0 |
+
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![DenseNet121 graybox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-graybox-N-100000.png)  |  ![DenseNet121 graybox heatmap defender](heatmaps/densenet121/R_d=R_a-def-graybox-N-100000.png)
 
+| attack                                                               |   steps | $R_a$                | $\rho$     |
+|:---------------------------------------------------------------------|--------:|:---------------------|:----------|
+| not attacking                                                        |       0 | 0.1, 51.795          | 0.01, 1.0 |
+| UAP <sup>*</sup><sup>=</sup>                                         |       0 | 15.264, 1417.474     | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>*</sup><sup>=</sup>        |       3 | 1417.474, 17475.284  | 0.01, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>                                       |   10000 | 11497.57, 100000.0   | 0.01, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      10 | 18738.174, 21544.347 | 0.25, 1.0 |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      30 | 23101.297, 35111.917 | 0.25, 1.0 |
+
+|    | model name      | $R_a$              | $\rho$     |
+|---:|:----------------|:-------------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | resnet-robust   | 11497.57, 100000.0 | 0.25, 1.0 |
+
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![DenseNet121 Blackbox heatmap adversary](heatmaps/densenet121/R_d=R_a-adv-blackbox-N-100000.png)  |  ![DenseNet121 Blackbox heatmap defender](heatmaps/densenet121/R_d=R_a-def-blackbox-N-100000.png)
+
+| attack                            |   steps | $R_a$              | $\rho$     |
+|:----------------------------------|--------:|:-------------------|:----------|
+| not attacking                     |       0 | 0.1, 8111.308      | 0.01, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |     100 | 8697.49, 26560.878 | 0.01, 1.0 |
+| HopSkipJumpAttack <sup>\|\|</sup> |       3 | 9326.033, 11497.57 | 0.25, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |   10000 | 9326.033, 100000.0 | 0.01, 1.0 |
+
+|    | model name      | $R_a$              | $\rho$     |
+|---:|:----------------|:-------------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | resnet-robust   | 9326.033, 100000.0 | 0.25, 1.0 |
 
 #### MobileNetV2
 ##### Whitebox scenario
@@ -117,18 +158,58 @@ Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![MobileNetV2 whitebox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-whitebox-N-100000.png)  |  ![MobileNetV2 whitebox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-whitebox-N-100000.png)
 
+| attack                                |   steps | $R_a$               | $\rho$      |
+|:--------------------------------------|--------:|:--------------------|:-----------|
+| not attacking                         |       0 | 0.1, 13.895         | 0.01, 1.0  |
+| UAP                                   |       0 | 1.326, 187.382      | 0.01, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |       3 | 141.747, 215.443    | 0.01, 0.31 |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |      30 | 200.923, 100000.0   | 0.01, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     100 | 1519.911, 100000.0  | 0.31, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup> |     300 | 26560.878, 100000.0 | 0.36, 1.0  |
+
+|    | model name      | $R_a$           | $\rho$     |
+|---:|:----------------|:----------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet-robust   | 1.758, 100000.0 | 0.22, 1.0 |
+
 ##### Graybox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![MobileNetV2 graybox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-graybox-N-100000.png)  |  ![MobileNetV2 graybox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-graybox-N-100000.png)
+
+| attack                                                               |   steps | $R_a$              | $\rho$      |
+|:---------------------------------------------------------------------|--------:|:-------------------|:-----------|
+| not attacking                                                        |       0 | 0.1, 22.23         | 0.01, 1.0  |
+| UAP <sup>*</sup><sup>=</sup>                                         |       0 | 3.728, 13219.411   | 0.01, 1.0  |
+| UAP <sup>&Dagger;</sup><sup>=</sup>                                  |       0 | 18.421, 2310.13    | 0.48, 1.0  |
+| L2CarliniWagnerAttack <sup>&Dagger;</sup><sup>=</sup>                |      10 | 2477.076, 9326.033 | 0.48, 1.0  |
+| BoundaryAttack                                                       |    3000 | 6579.332, 7564.633 | 0.01, 0.47 |
+| BoundaryAttack <sup>\|\|</sup>                                       |   10000 | 7564.633, 100000.0 | 0.01, 1.0  |
+| L2CarliniWagnerAttack <sup>\|\|</sup><sup>&Dagger;</sup><sup>=</sup> |      30 | 10000.0, 23101.297 | 0.19, 1.0  |
+
+|    | model name      | $R_a$           | $\rho$     |
+|---:|:----------------|:----------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0   | 0.01, 1.0 |
+|  1 | resnet-robust   | 3.728, 100000.0 | 0.19, 1.0 |
 
 ##### Blackbox scenario
 Adversary             |  Defender
 :-------------------------:|:-------------------------:
 ![MobileNetV2 Blackbox heatmap adversary](heatmaps/MobileNetV2/R_d=R_a-adv-blackbox-N-100000.png)  |  ![MobileNetV2 Blackbox heatmap defender](heatmaps/MobileNetV2/R_d=R_a-def-blackbox-N-100000.png)
 
+| attack                            |   steps | $R_a$               | $\rho$     |
+|:----------------------------------|--------:|:--------------------|:----------|
+| not attacking                     |       0 | 0.1, 657.933        | 0.01, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |     100 | 705.48, 16297.508   | 0.01, 1.0 |
+| HopSkipJumpAttack                 |       3 | 2310.13, 5722.368   | 0.01, 1.0 |
+| BoundaryAttack                    |    3000 | 3764.936, 9326.033  | 0.01, 1.0 |
+| HopSkipJumpAttack <sup>\|\|</sup> |       3 | 6135.907, 14174.742 | 0.19, 1.0 |
+| BoundaryAttack <sup>\|\|</sup>    |   10000 | 7564.633, 100000.0  | 0.01, 1.0 |
 
-
+|    | model name      | $R_a$              | $\rho$     |
+|---:|:----------------|:-------------------|:----------|
+|  0 | resnet-standard | 0.1, 100000.0      | 0.01, 1.0 |
+|  1 | resnet-robust   | 3764.936, 100000.0 | 0.19, 1.0 |
 
 ### 6xN Games
 #### Whitebox scenario
